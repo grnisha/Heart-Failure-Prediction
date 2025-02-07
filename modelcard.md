@@ -6,8 +6,9 @@
 - **Version**: 1.0
 
 ## Intended Use
-- Predicting the presence of heart disease based on clinical and personal health data.
-- Identifying potential high-risk patients for further medical examination.
+- For educational and research purposes only.
+- Intended to demonstrate and illustrate machine learning techniques in a controlled, academic setting.
+- Not designed for actual clinical diagnosis or medical decision-making.
 
 ## Training Data
 - Training set: 60% of heart disease dataset.
