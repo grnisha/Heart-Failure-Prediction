@@ -62,7 +62,7 @@ In the first stage, before developing a model, a thorough analysis of the data w
  
    During the Exploratory Data Analysis (EDA) phase, the dataset was thoroughly examined to understand the distributions and relationships among various features. Quantitative variables such as Age and RestingBP were analyzed to observe their distributions. Additionally, a heatmap was generated to visualize the correlations between different features. This heatmap helped identify relationships among features, such as the correlation between MaxHR (Maximum Heart Rate) and Oldpeak (ST depression induced by exercise relative to rest), which were found to be more correlated with the presence of heart disease.
 
-![image](https://github.com/user-attachments/assets/777a3205-2e05-420f-87bf-7fbd1e398054)
+  ![image](images/heatmap.png)
 
 
 - **Feature Engieering**  
@@ -78,9 +78,17 @@ After finishing the pre-processing step, the new dataset is saved to a new csv f
 
    Logistic Regression, Decision Tree, Random Forest, Gradient Boosting Classifier, and Support Vector Machine models were compared. Each model was trained on the training set using the same random seed for reproducibility. Predictions were calculated on both the training and validation sets. Confusion matrices were used to visualise the results and help focus on reducing false negatives to avoid missing heart disease cases. ROC AUC scores measured the overall capability of each model to discriminate between positive and negative classes. 
 
-   | ![image](https://github.com/user-attachments/assets/09996342-ea59-477a-ab29-c8147724029d) | ![image](https://github.com/user-attachments/assets/ae4f2a94-9653-4d3d-a29f-26e719226b5a) |
-   | ![image](https://github.com/user-attachments/assets/4d37bbf9-aae5-4658-88dd-bb51ff64579d) | ![image](https://github.com/user-attachments/assets/0bb0d0d3-97ce-44f1-95ff-ecbfb0fa959c) |
-   | ![image](https://github.com/user-attachments/assets/409b06c9-b3c2-4d44-bddb-4b6c0941f365) |
+   | Logistic Regression | Decision Tree |
+   |---------------------|---------------|
+   | ![image](images/CM-LR.png) | ![image](images/CM-DTC.png) |
+
+   | Random Forest | Gradient Boosting Classifier |
+   |---------------|-----------------------------|
+   | ![image](images/CM-RFC.png) | ![image](images/CM-GBC.png) |
+
+   | Support Vector Machine | 
+   |------------------------| 
+   | ![image](images/CM-SVM.png) | 
 
    When examining the confusion matrix, note the following:
 
@@ -94,7 +102,9 @@ After finishing the pre-processing step, the new dataset is saved to a new csv f
 
    Now let's look at the ROC Curves.
 
-   | ![image](https://github.com/user-attachments/assets/e59d1c92-d78c-4c83-9e0d-961fc89d8a84) | ![image](https://github.com/user-attachments/assets/49b70791-1027-4f86-beb9-186229cbadc1) |
+    ![image](images/ROC-Train.png)  
+    
+    ![image](images/ROC-Validation.png) 
 
    GradientBoostingClassifier dominates with an AUC of 0.9916, near-perfect performance, suggesting excellent training fit.
 
@@ -125,10 +135,10 @@ The results are summarised below
  
 ### Final Random Forest Classifier Results
 
-![image](https://github.com/user-attachments/assets/4ec463fb-461e-4514-a9c3-f32cf9a497fa)
+![image](images/ROC-Final.png)
 
 
-![image](https://github.com/user-attachments/assets/18db1f9b-de19-405c-94af-9a9e50cb96cc)
+![image](images/CM-Final.png)
 
 | Metric              | Value     |
 |---------------------|----------:|
